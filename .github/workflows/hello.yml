@@ -13,6 +13,3 @@ jobs:
 
       - name: Show Python version
         run: python3 --version
-
-      - name: This will fail
-        run: exit 1
