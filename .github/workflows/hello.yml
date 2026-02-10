@@ -3,6 +3,9 @@ name: Hello GitHub Actions
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
   greeting:
@@ -13,3 +16,9 @@ jobs:
 
       - name: Show Python version
         run: python3 --version
+
+      - name: Show trigger info
+        run: |
+          echo "Event name: ${{ github.event_name }}"
+          echo "Branch: ${{ github.ref }}"
+          echo "Actor: ${{ github.actor}}"
