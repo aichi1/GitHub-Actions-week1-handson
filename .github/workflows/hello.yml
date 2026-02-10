@@ -21,23 +21,23 @@ jobs:
 
   run-python:
     runs-on: ubuntu-latest
-      steps:
-        - name: Checkout repository
-          uses: action/checkout@v4
+    steps:
+      - name: Checkout repository
+        uses: action/checkout@v4
+    
+      - name: Set up Python
+        uses: action/setup-python@5
+        with:
+          python-version: "3.12"
       
-        - name: Set up Python
-          uses: action/setup-python@5
-          with:
-            python-version: "3.12"
-        
-        - name: Show Python version
-          run: python --version
+      - name: Show Python version
+        run: python --version
 
-        - name: Run calculator
-          run: python src/calculator.py
-        
-        - name: Install test dependencies
-          run: pip install pytest
+      - name: Run calculator
+        run: python src/calculator.py
+      
+      - name: Install test dependencies
+        run: pip install pytest
 
-        - name: Run tests
-          run: pytest tests/ -v
+      - name: Run tests
+        run: pytest tests/ -v
