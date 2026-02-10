@@ -1,12 +1,18 @@
-name: Hello GitHub Actionon
+name: Hello GitHub Actions
 
 on:
   push:
     branches: [main]
 
 jobs:
-  greeeting:
+  greeting:
     runs-on: ubuntu-latest
     steps:
       - name: Say Hello
         run: echo "Hello, GitHub Actions!"
+
+      - name: Show Python version
+        run: python3 --version
+
+      - name: This will fail
+        run: exit 1
