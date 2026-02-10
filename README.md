@@ -69,3 +69,5 @@ handson-01-first-workflow/
 3. 各Stepで動作確認を行い、GitHub UIで結果を確認
 4. 詰まったら `tips.md` を参照
 5. 完成したら `solution/` と見比べて理解を深める
+
+Testing pu;;_request trigger
